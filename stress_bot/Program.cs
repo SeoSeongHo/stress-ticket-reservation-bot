@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace stress_bot
 {
@@ -6,7 +7,7 @@ namespace stress_bot
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Task.WhenAll();
         }
     }
 }
