@@ -5,6 +5,7 @@ using stress_bot.services.constants;
 using stress_bot.services.utils;
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Text;
 using static stress_bot.models.events.EventRequestModel;
 
@@ -16,7 +17,7 @@ namespace stress_bot.services.states
         {
         }
 
-        public override BaseState MoveNextState()
+        public override void MoveNextState(Queue<BaseState> queue)
         {
             // TODO dequeue
         }
@@ -40,9 +41,7 @@ namespace stress_bot.services.states
 
             NetworkUtil.HttpRequestAsync(httpRequestModel).Wait();
 
-            MoveNextState();
-
-            return this.GetProcessor(this.currentState);
+            return this;
         }
     }
 }

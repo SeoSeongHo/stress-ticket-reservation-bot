@@ -18,10 +18,8 @@ namespace stress_bot.services.states
         {
         }
 
-        public override BaseState MoveNextState()
+        public override void MoveNextState(Queue<BaseState> queue)
         {
-            this.currentState = new Random().Next(100) < 30 ?  BotStateType.move : BotStateType.end;
-            return this;
         }
 
         public override BaseState Run()
@@ -43,9 +41,7 @@ namespace stress_bot.services.states
 
             NetworkUtil.HttpRequestAsync(httpRequestModel).Wait();
 
-            MoveNextState();
-
-            return this.GetProcessor(this.currentState);
+            return this;
         }
     }
 }

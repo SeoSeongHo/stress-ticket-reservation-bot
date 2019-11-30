@@ -19,9 +19,9 @@ namespace stress_bot.services.states
             this.eventCommon = eventCommon;
         }
 
-        public BaseState GetProcessor(BotStateType botStateType)
+        public BaseState TriggerState()
         {
-            switch (botStateType)
+            switch (currentState)
             {
                 case BotStateType.start:
                     return new StartState(this.eventCommon).Run();
@@ -33,7 +33,7 @@ namespace stress_bot.services.states
             }
         }
 
-        public abstract BaseState MoveNextState();
+        public abstract void MoveNextState(Queue<BaseState> queue);
         public abstract BaseState Run();
     }
 }
