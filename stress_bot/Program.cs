@@ -12,6 +12,7 @@ namespace stress_bot
     {
         static void Main(string[] args)
         {
+            // TODO states 초기 세팅
             var states = new List<BaseState>();
             Task.WhenAll(
                 Enumerable.Range(0, BotConstants.THREAD_NUM).Select(

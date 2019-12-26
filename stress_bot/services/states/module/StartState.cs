@@ -20,26 +20,13 @@ namespace stress_bot.services.states
 
         public override void MoveNextState(Queue<BaseState> queue)
         {
+            this.currentState = BotStateType.events;
+            queue.Enqueue(this);
         }
 
         public override BaseState Run()
         {
-            var eventModel = new EventRequestModel
-            {
-                event_name = BotConstants.START_EVENT,
-                event_datetime = DateTime.Now,
-                event_common = this.eventCommon
-            };
-
-            var httpRequestModel = new HttpRequestModel
-            {
-                Url = "",
-                HttpMethod = HttpMethod.Post,
-                Headers = new Dictionary<string, string> { { "content-type", "application/json"} },
-                Body = JsonConvert.SerializeObject(eventModel)
-            };
-
-            NetworkUtil.HttpRequestAsync(httpRequestModel).Wait();
+            this.eventCommon.event_id = Guid.NewGuid().ToString();
 
             return this;
         }

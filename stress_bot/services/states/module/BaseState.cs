@@ -24,11 +24,11 @@ namespace stress_bot.services.states
             switch (currentState)
             {
                 case BotStateType.start:
-                    return new StartState(this.eventCommon).Run();
-                case BotStateType.move:
-                    return new MoveState(this.eventCommon).Run();
-                case BotStateType.end:
                 default:
+                    return new StartState(this.eventCommon).Run();
+                case BotStateType.events:
+                    return new EventState(this.eventCommon).Run();
+                case BotStateType.end:
                     return new EndState(this.eventCommon).Run();
             }
         }

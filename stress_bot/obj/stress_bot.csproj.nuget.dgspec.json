@@ -1,21 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\swa04\\project\\stress_bot\\stress_bot\\stress_bot.csproj": {}
+    "C:\\Users\\IGAWorks\\personal_project\\stress_bot\\stress_bot\\stress_bot.csproj": {}
   },
   "projects": {
-    "C:\\Users\\swa04\\project\\stress_bot\\stress_bot\\stress_bot.csproj": {
+    "C:\\Users\\IGAWorks\\personal_project\\stress_bot\\stress_bot\\stress_bot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\swa04\\project\\stress_bot\\stress_bot\\stress_bot.csproj",
+        "projectUniqueName": "C:\\Users\\IGAWorks\\personal_project\\stress_bot\\stress_bot\\stress_bot.csproj",
         "projectName": "stress_bot",
-        "projectPath": "C:\\Users\\swa04\\project\\stress_bot\\stress_bot\\stress_bot.csproj",
-        "packagesPath": "C:\\Users\\swa04\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\swa04\\project\\stress_bot\\stress_bot\\obj\\",
+        "projectPath": "C:\\Users\\IGAWorks\\personal_project\\stress_bot\\stress_bot\\stress_bot.csproj",
+        "packagesPath": "C:\\Users\\IGAWorks\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\IGAWorks\\personal_project\\stress_bot\\stress_bot\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\swa04\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\IGAWorks\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
@@ -53,12 +58,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
